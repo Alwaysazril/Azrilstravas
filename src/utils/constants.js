@@ -31,7 +31,7 @@ module.exports = {
 
   NEWS: [
     {
-      image: "https://l.top4top.io/p_37982eyr45.png",
+      image: "https://d.top4top.io/p_38093vrtc3.png",
       title: "AZRIL STRAVAS V1.0",
       desc: "Selamat datang di Azril Stravas Official App. Tools terlengkap & terpercaya!"
     },
