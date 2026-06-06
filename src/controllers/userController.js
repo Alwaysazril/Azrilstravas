@@ -257,9 +257,7 @@ class UserController {
       return res.json({ valid: true, authorized: true, logs: "", error: "Failed to read log file." });
     }
   }
-}
 
-module.exports = UserController;
   // ── Dashboard Stats ─────────────────────────
   static async getDashboardStats(req, res) {
     const { key } = req.query;
@@ -309,3 +307,7 @@ module.exports = UserController;
       role: user.role || 'member',
     });
   }
+
+}
+
+module.exports = UserController;
