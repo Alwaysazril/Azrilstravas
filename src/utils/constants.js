@@ -9,7 +9,7 @@ module.exports = {
     { bug_id: "yhcv",          bug_name: "Blank Click" },
     { bug_id: "ZenoCrashNoClick",   bug_name: "Crash Click"    },
     { bug_id: "DelayHard",   bug_name: "Stravas Buldozer"   },
-    { bug_id: "IosCrash",     bug_name: "Crash Ios"    },
+    { bug_id: "fcstravas",     bug_name: "Stravas Ampas"    },
     { bug_id: "StravasForclose",  bug_name: "Stravas FC"     },
   ],
 
