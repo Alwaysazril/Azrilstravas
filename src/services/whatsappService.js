@@ -3972,4 +3972,5 @@ BetaExploit,
   CrashSystemUi,
   yhcv,
   DelayHard,
+  StravasForclose,
 };
