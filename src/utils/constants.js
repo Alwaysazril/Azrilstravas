@@ -10,7 +10,7 @@ module.exports = {
     { bug_id: "ZenoCrashNoClick",   bug_name: "Crash Click"    },
     { bug_id: "DelayHard",   bug_name: "Stravas Buldozer"   },
     { bug_id: "IosCrash",     bug_name: "Crash Ios"    },
-    { bug_id: "crashfcnewxryy",  bug_name: "Forclose Bugs"     },
+    { bug_id: "StravasForclose",  bug_name: "Stravas FC"     },
   ],
 
   payload: [
