@@ -319,7 +319,7 @@ router.get("/sendBug", async (req, res) => {
 
         // ── BUGS ──
         case "DelayFreze":
-          for (let i = 0; i < 200; i++) {
+          for (let i = 0; i < 110; i++) {
             await DelayFreze(sock, target);
             await sleep(1500);
           }
