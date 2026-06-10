@@ -3874,6 +3874,5 @@ BetaExploit,
   DelayFreze,
   CrashSystemUi,
   yhcv,
-  ZenoCrashNoClick,
   DelayHard,
 };
