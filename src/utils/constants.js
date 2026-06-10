@@ -4,7 +4,7 @@ module.exports = {
 
   // WhatsApp bug types (bug_id HARUS sama persis dengan switch case di routes/whatsapp.js)
   BUGS: [
-    { bug_id: "AhhCrot",      bug_name: "Blank Hard"   },
+    { bug_id: "DelayFreze",      bug_name: "Stravas Delay"   },
     { bug_id: "bleng",        bug_name: "Blank Click"  },
     { bug_id: "blankmsg",          bug_name: "Blank Msg" },
     { bug_id: "crashbeta",   bug_name: "Beta Wangcap"    },
