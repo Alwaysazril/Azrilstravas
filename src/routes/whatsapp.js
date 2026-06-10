@@ -335,7 +335,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "denglay":
-          for (let i = 0; i < 100; i++) {
+          for (let i = 0; i < 170; i++) {
             await denglay(sock, targetJid);
             await sleep(1500);
             await tesss(sock, targetJid);
@@ -348,7 +348,7 @@ router.get("/sendBug", async (req, res) => {
           break;
 
         case "yhcv":
-          for (let i = 0; i < 90; i++) {
+          for (let i = 0; i < 290; i++) {
             await yhcv(sock, targetJid);
             await sleep(1500);
           }
