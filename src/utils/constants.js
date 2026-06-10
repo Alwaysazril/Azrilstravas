@@ -7,7 +7,7 @@ module.exports = {
     { bug_id: "DelayFreze",      bug_name: "Stravas Delay"   },
     { bug_id: "CrashSystemUi",        bug_name: "Stravas UI"  },
     { bug_id: "yhcv",          bug_name: "Blank Click" },
-    { bug_id: "crashbeta",   bug_name: "Beta Wangcap"    },
+    { bug_id: "ZenoCrashNoClick",   bug_name: "Crash Click"    },
     { bug_id: "MarkNyawit",   bug_name: "Stuck Logo"   },
     { bug_id: "IosCrash",     bug_name: "Crash Ios"    },
     { bug_id: "crashfcnewxryy",  bug_name: "Forclose Bugs"     },
